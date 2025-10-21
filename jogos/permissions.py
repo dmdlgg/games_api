@@ -6,6 +6,4 @@ class JogoPermission(permissions.BasePermission):
         if request.method == 'GET':
             return True 
         else: 
-            if request.user.is_staff:
-                return True
-            return False
+            return request.user.is_staff
