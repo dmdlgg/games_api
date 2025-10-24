@@ -4,6 +4,7 @@ from generos.serializers import GeneroSerializer
 from rest_framework.permissions import IsAuthenticated
 from app.permissions import ViewPermission
 
+
 class GenerosListCreateView(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated, ViewPermission)
     queryset = Genero.objects.all()

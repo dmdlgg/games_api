@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from jogos.models import Jogo
 
+
 class Review(models.Model):
     jogo = models.ForeignKey(Jogo, on_delete=models.PROTECT, related_name='reviews')
     estrelas = models.IntegerField(

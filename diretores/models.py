@@ -5,6 +5,7 @@ NACIONALIDADE_CHOICES = (
     ('JPN', 'Japão'),
 )
 
+
 class Diretor(models.Model):
     nome = models.CharField(max_length=200)
     data_nascimento = models.DateField(null=True, blank=True)
@@ -13,7 +14,7 @@ class Diretor(models.Model):
         choices=NACIONALIDADE_CHOICES,
         blank=True,
         null=True
-        )
-    
+    )
+
     def __str__(self):
         return self.nome
