@@ -2,7 +2,7 @@ from django.db.models import Count
 from reviews.models import Review
 from rest_framework import generics, views, response, status
 from jogos.models import Jogo
-from jogos.serializers import JogoSerializer
+from jogos.serializers import JogoSerializer, JogoDetailSerializer
 from rest_framework.permissions import IsAuthenticated
 from app.permissions import ViewPermission
 
@@ -12,11 +12,19 @@ class ListCreateJogoView(generics.ListCreateAPIView):
     queryset = Jogo.objects.all()
     serializer_class = JogoSerializer
 
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return JogoDetailSerializer
+        return JogoSerializer
 
 class RetrieveUpdateDestroyJogoView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthenticated, ViewPermission)
     queryset = Jogo.objects.all()
-    serializer_class = JogoSerializer
+    
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return JogoDetailSerializer
+        return JogoSerializer
 
 
 class JogosStatsView(views.APIView):
