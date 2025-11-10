@@ -4,6 +4,8 @@ Uma API RESTful desenvolvida com Django REST Framework, projetada para fornecer 
 O projeto vai além do CRUD tradicional, incorporando integração com IA para geração automática de sinopses, endpoint de estatísticas avançadas, e autenticação JWT completa.
 Além disso, segue boas práticas de código e padronização de estilo com o uso do linter Flake8 (seguindo a pep8), garantindo qualidade, legibilidade e manutenibilidade do código.
 
+OBS: O projeto ainda está em desenvolvimento. Futuramente será feito o deploy via AWS e o desenvolvimento de um front-end para consumir a API.
+
 ---
 
 ## 🚀 Funcionalidades
@@ -100,4 +102,11 @@ Essa sinopse é então salva no banco de dados através de um Django Signal, gar
 |   `DELETE`  | `/api/v1/jogos/<id>/`  | Remove um jogo                          |
 |    `GET`    | `/api/v1/stats/`       | Retorna estatísticas sobre os jogos     |
 
+---
+## 📬 Contato
+
+Fique à vontade para entrar em contato caso tenha dúvidas, sugestões ou queira contribuir:
+  
+- 📨 **Email:** dumedolago@gmail.com 
+- 💻 **Linkedin:** [Eduardo Medolago](https://www.linkedin.com/in/eduardo-medolago-364288259/)
 
