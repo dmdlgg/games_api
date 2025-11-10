@@ -8,7 +8,7 @@ from app.permissions import ViewPermission
 
 
 class ListCreateJogoView(generics.ListCreateAPIView):
-    permission_classes = (IsAuthenticated, ViewPermission)
+    #permission_classes = (IsAuthenticated, ViewPermission)
     queryset = Jogo.objects.all()
     serializer_class = JogoSerializer
 

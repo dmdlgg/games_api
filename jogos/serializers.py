@@ -14,7 +14,7 @@ class JogoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def get_media_avaliacoes(self, obj):
-        media = obj.reviews.aggregate(Avg('estrelas'))
+        media = obj.reviews.aggregate(Avg('estrelas'))['estrelas__avg']
 
         if media:
             return round(media, 1)
