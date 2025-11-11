@@ -35,8 +35,8 @@ OBS: O projeto ainda está em desenvolvimento. Futuramente será feito o deploy 
 
 ### 1️⃣ Clone o repositório
 ```bash
-git clone https://github.com/dmdlgg/games-api.git
-cd games-api
+git clone https://github.com/dmdlgg/games_api.git
+cd games_api
 ```
 
 ### 2️⃣ Crie um ambiente virtual 
@@ -70,12 +70,12 @@ python manage.py runserver
 
 ## 🔑 Autenticação JWT
 - Para obter o token, basta fazer um POST com o usuário e senha no endpoint /api/v1/autenticacao/token/
-  ´´´
+  bash```
   {
   "username": "seu_usuario",
   "password": "sua_senha"
   }
-  ´´´
+  ```
   Inclua o o token JWT nos headers para acessar os endpoints protegidos
 ---
 
