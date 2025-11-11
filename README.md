@@ -70,7 +70,7 @@ python manage.py runserver
 
 ## 🔑 Autenticação JWT
 - Para obter o token, basta fazer um POST com o usuário e senha no endpoint /api/v1/autenticacao/token/
-  bash```
+  ```bash
   {
   "username": "seu_usuario",
   "password": "sua_senha"
