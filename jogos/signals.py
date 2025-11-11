@@ -16,6 +16,6 @@ def gerar_sinopse(sender, instance, **kwargs):
         client = OpenAI(api_key = API_KEY)
         response = client.responses.create(
             model = "gpt-5-nano",
-            input = f"Gere uma descrição curta para o jogo {instance.nome} do diretor {instance.diretor}, citando suas principais características, seu gênero e sua gameplay. A descrição não deve ulrapassar 8 linhas. "
+            input = f"Crie uma descrição concisa do jogo {instance.nome}, dirigido por {instance.diretor}. Destaque suas principais características, o gênero e aspectos da gameplay. A resposta deve ter no máximo 10 linhas e ser entregue apenas em texto simples, sem formatações ou listas."
         )
         instance.sinopse = response.output_text

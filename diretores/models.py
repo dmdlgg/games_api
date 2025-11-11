@@ -3,6 +3,7 @@ from django.db import models
 NACIONALIDADE_CHOICES = (
     ('EUA', 'Estados Unidos'),
     ('JPN', 'Japão'),
+    ('ING', 'Inglaterra')
 )
 
 
