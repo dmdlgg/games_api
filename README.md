@@ -72,8 +72,8 @@ python manage.py runserver
 - Para obter o token, basta fazer um POST com o usuário e senha no endpoint /api/v1/autenticacao/token/
   ```bash
   {
-  "username": "seu_usuario",
-  "password": "sua_senha"
+    "username": "seu_usuario",
+    "password": "sua_senha"
   }
   ```
   Inclua o o token JWT nos headers para acessar os endpoints protegidos
