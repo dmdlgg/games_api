@@ -1,10 +1,12 @@
 from rest_framework import serializers
 from generos.serializers import GeneroSerializer
 from diretores.serializers import DiretorSerializer
+from desenvolvedora.serializers import DesenvolvedoraSerializer
 from jogos.models import Jogo
 from django.db.models import Avg
 
-#retorno para requisições POST
+
+# retorno para requisições POST
 class JogoSerializer(serializers.ModelSerializer):
 
     media_avaliacoes = serializers.SerializerMethodField(read_only=True)
@@ -21,15 +23,17 @@ class JogoSerializer(serializers.ModelSerializer):
 
         return None
 
-#retorno para requisições GET 
+
+# retorno para requisições GET
 class JogoDetailSerializer(serializers.ModelSerializer):
 
     genero = GeneroSerializer(many=True)
     diretor = DiretorSerializer(many=True)
+    desenvolvedora = DesenvolvedoraSerializer(many=True)
 
     class Meta:
         model = Jogo
-        fields = ['nome', 'diretor', 'genero', 'data_lancamento', 'sinopse', 'media_avaliacoes']
+        fields = ['nome', 'diretor', 'genero', 'desenvolvedora', 'data_lancamento', 'sinopse', 'media_avaliacoes']
 
     media_avaliacoes = serializers.SerializerMethodField(read_only=True)
 

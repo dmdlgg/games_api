@@ -17,10 +17,11 @@ class ListCreateJogoView(generics.ListCreateAPIView):
             return JogoDetailSerializer
         return JogoSerializer
 
+
 class RetrieveUpdateDestroyJogoView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthenticated, ViewPermission)
     queryset = Jogo.objects.all()
-    
+
     def get_serializer_class(self):
         if self.request.method == 'GET':
             return JogoDetailSerializer
