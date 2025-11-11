@@ -90,6 +90,7 @@ Essa sinopse é então salva no banco de dados através de um Django Signal, gar
   -> Se o campo de sinopse estiver vazio, o a API da OpenAI é chamada passando os dados do jogo
 
   -> A sinopse é gerada e salva automaticamente no banco
+  
 ---
 
 ## Endpoints Principais:
